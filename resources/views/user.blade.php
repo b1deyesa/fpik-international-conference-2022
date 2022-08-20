@@ -2,7 +2,7 @@
     {{-- User --}}
     <div class="user">
         <div class="container">
-            <a href="{{ return back() }}" class="back">< Back</a>
+            <a href="{{ route('login') }}" class="back">< Back</a>
             <h1 class="title">User Data</h1>
             <h3 class="sub-title">{{ auth()->user()->status->name }}</h3>
             @can('admin')
