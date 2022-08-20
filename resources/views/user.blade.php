@@ -2,12 +2,12 @@
     {{-- User --}}
     <div class="user">
         <div class="container">
-            <a href="{{ route('login') }}" class="back">< Back</a>
-            <h1 class="title">Your data</h1>
+            <a href="{{ return back() }}" class="back">< Back</a>
+            <h1 class="title">User Data</h1>
             <h3 class="sub-title">{{ auth()->user()->status->name }}</h3>
             @can('admin')
-                        <a class="admin-button" href="{{ route('admin.index') }}">Admin Panel</a>
-                        @endcan
+                <a class="admin-button" href="{{ route('admin.index') }}">Admin Panel</a>
+            @endcan
 
             {{-- Error/Success message --}}
             <x-alert type="success" target="success"></x-alert>

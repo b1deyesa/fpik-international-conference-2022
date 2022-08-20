@@ -36,6 +36,13 @@ class AuthServiceProvider extends ServiceProvider
         # (5)Presenter - Domestic      |
         # (6)Presenter - International |
         # ------------------------------
+
+        # --------- User Role ----------
+        #                              |
+        # (1)Guest                     |
+        # (2)Admin                     |
+        # (3)Superadmin                |
+        # ------------------------------
         
         Gate::define('user-payment', function (User $user) {
             return $user->status->id === 5 || 
@@ -51,7 +58,7 @@ class AuthServiceProvider extends ServiceProvider
         });
 
         Gate::define('admin', function (User $user) {
-            return $user->role->name = 'admin';
+            return $user->role->id == 2 ;
         });
 
     }

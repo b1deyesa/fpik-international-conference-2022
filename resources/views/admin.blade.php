@@ -2,7 +2,7 @@
     {{-- Admin --}}
     <div class="admin">
         <div class="container">
-            <a href="{{ route('login') }}" class="back">< Back</a>
+            <a href="{{ return back() }}" class="back">< Back</a>
             <h1 class="title">Admin Checking</h1>
 
             {{-- Status --}}
