@@ -12,6 +12,39 @@
                     <i class="fas fa-calendar-days"></i>Moday, 12 September 2022
                     <br><i class="fas fa-clock"></i>12.00 WIB
                 </h2>
+                <div id="countdown" class="countdown">
+                    <script>
+                        var countDownDate = new Date("Oct 27 2022, 2024 15:37:25").getTime();
+                        
+                        var x = setInterval(function() {
+                        
+                          // Get today's date and time
+                          var now = new Date().getTime();
+                        
+                          // Find the distance between now and the count down date
+                          var distance = countDownDate - now;
+                        
+                          // Time calculations for days, hours, minutes and seconds
+                          var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                        
+                          // Display the result in the element with id="demo"
+                          document.getElementById("countdown").innerHTML = 
+                            "<span><h2>"+days+"</h2>Days</span>"+
+                            "<span><h2>"+hours+"</h2>hours</span>"+
+                            "<span><h2>"+minutes+"</h2>minutes</span>"+
+                            "<span><h2>"+seconds+"</h2>seconds</span>"
+                        
+                          // If the count down is finished, write some text
+                          if (distance < 0) {
+                            clearInterval(x);
+                            document.getElementById("countdown").innerHTML = "<span class='expired'><h2>Event has started</h2></span>";
+                          }
+                        }, 1000);
+                    </script>
+                </div>
             </div>
             
             {{-- Jumbotron Form --}}

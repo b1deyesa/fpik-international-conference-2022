@@ -20,18 +20,18 @@ use App\Http\Controllers\PaymentController;
 
 Route::get('/', function() { return view('index', ['statuses' => Status::all()]); })->name('login');
 
-Route::get('/user', [UserController::class, 'index'])               ->name('user.index')->middleware('auth');
-Route::post('/user/store', [UserController::class, 'store'])        ->name('user.store');
-Route::put('/user/{user}', [UserController::class, 'update'])       ->name('user.update');
-Route::post('/user/login', [UserController::class, 'authenticate']) ->name('user.login');
-Route::get('/user/logout', [UserController::class, 'logout'])       ->name('user.logout');
+Route::post('/user/store', [UserController::class, 'store'])         ->name('user.store');
+Route::post('/user/login', [UserController::class, 'authenticate'])  ->name('user.login');
 
-
-Route::put('/user/{user}/payment', [PaymentController::class, 'update'])       ->name('payment.update');
-Route::get('/user/{payment}/payment', [PaymentController::class, 'download'])  ->name('payment.download');
-Route::get('/admin/{payment}/{status}', [PaymentController::class, 'confirm']) ->name('payment.confirm');
-
-Route::get('/user/article/{article}', [ArticleController::class, 'download'])  ->name('article.download');
-
-Route::get('/admin', [AdminController::class, 'index'])           ->name('admin.index');
-Route::get('/admin/admin', [AdminController::class, 'setAdmin'])  ->name('admin.setAdmin');
+Route::middleware('auth')->group(function () {
+    Route::get('/user',                     [UserController::class,    'index'])    ->name('user.index');
+    Route::put('/user/update/{user}',       [UserController::class,    'update'])   ->name('user.update');
+    Route::get('/user/logout',              [UserController::class,    'logout'])   ->name('user.logout');
+    Route::put('/user/payment/{user}',      [PaymentController::class, 'update'])   ->name('payment.update');
+    Route::get('/user/payment/{payment}',   [PaymentController::class, 'download']) ->name('payment.download');
+    Route::get('/user/article/{article}',   [ArticleController::class, 'download']) ->name('article.download');
+    Route::get('/admin',                    [AdminController::class,   'index'])    ->name('admin.index');
+    Route::get('/admin/{payment}/{status}', [PaymentController::class, 'confirm'])  ->name('payment.confirm');
+    Route::get('/admin/set/admin/{user}',   [AdminController::class,   'setAdmin']) ->name('admin.setAdmin');
+    Route::get('/admin/get/admin/{user}',   [AdminController::class,   'getAdmin']) ->name('admin.getAdmin');
+});

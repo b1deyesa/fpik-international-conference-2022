@@ -14,6 +14,7 @@ class UserController extends Controller
 {
     public function index()
     {
+        if(auth()->user()->id == 1) { return redirect('/admin'); }
         return view('user');
     }
     
@@ -72,7 +73,6 @@ class UserController extends Controller
             'password' => 'required'
         ]);
 
- 
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
             return redirect()->intended('/user');

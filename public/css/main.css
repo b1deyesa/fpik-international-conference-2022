@@ -109,6 +109,27 @@ body {
 .jumbotron .detail .time i {
     margin: 0 .5em 0 0;
 }
+.jumbotron .detail .countdown {
+    display: flex;
+    font-size: 1.2rem;
+    margin: 1.5em 0;
+}
+.jumbotron .detail .countdown > span {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 5.5em;
+    margin: .3em;
+    padding: 1em;
+    border-radius: 1em;
+    color: var(--color-white);
+    background: radial-gradient(#FFFFFF50,#FFFFFF90);
+}
+.jumbotron .detail .countdown > span.expired {
+    width: 20em;
+}
 .jumbotron .form {
     max-width: 23em;
     padding: 2em 2em .8em; 
@@ -687,6 +708,7 @@ body {
     color: var(--color-white);
 }
 .user .container > .sub-title {
+    margin: 0 0 2em;
     color: var(--palatte-2-4);
 }
 .user .admin-button {
@@ -701,7 +723,6 @@ body {
     background-color: var(--palatte-1-3);
     text-shadow: 1px 1px 1px #00000070;
 }
-
 .user .back {
     position: absolute;
     display: block;
@@ -714,7 +735,6 @@ body {
     display: flex;
     align-items: center;
     width: 100%;
-    margin: 1em 0 2em;
     padding: 1em 2em;
     border-radius: 1em;
 }
@@ -753,6 +773,7 @@ body {
     display: flex;
     justify-content: center;
     width: 100%;
+    margin: 1em;
 }
 .user .form ul {
     display: flex;
@@ -858,7 +879,7 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
-    max-width: 50em;
+    max-width: 90em;
     margin: 0 0 2em;
 }
 .admin .status li {
@@ -867,8 +888,8 @@ body {
     text-transform: uppercase;
     list-style: none;
     white-space: nowrap;
-    width: 23%;
-    margin: 1%;
+    width: 15%;
+    margin: .5%;
     padding: .5em 1.5em;
     border-radius: 10em;
     color: var(--color-white);
@@ -938,6 +959,9 @@ footer {
     .jumbotron .detail {
         font-size: 1.1rem;
     }
+    .jumbotron .detail .countdown {
+        font-size: 1.1rem;
+    }
 }
 
 @media only screen and (max-width: 1000px) {
@@ -997,6 +1021,9 @@ footer {
         font-size: 1.5rem;
         color: var(--palatte-2-4);
         background-color: transparent;
+    }
+    .jumbotron .detail .countdown {
+        font-size: .96rem;
     }
 
     .background p img {
@@ -1094,6 +1121,7 @@ footer {
 
     .admin .status li {
         width: 48%;
+        margin: 1%;
     }
     
     footer {
