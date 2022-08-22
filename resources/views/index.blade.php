@@ -9,12 +9,12 @@
                 <h3 class="title">Pattimura University International Conference Series</h3>
                 <h3 class="sub-title">Organized by: Faculty of Fisheries and Marine Science, Pattimura University, Ambon, Indonesia</h3>
                 <h2 class="time">
-                    <i class="fas fa-calendar-days"></i>Moday, 12 September 2022
-                    <br><i class="fas fa-clock"></i>12.00 WIB
+                    <i class="fas fa-calendar-days"></i>27 October 2022
+                    <br><i class="fas fa-clock"></i>09.00 WIT
                 </h2>
                 <div id="countdown" class="countdown">
                     <script>
-                        var countDownDate = new Date("Oct 27 2022, 2024 15:37:25").getTime();
+                        var countDownDate = new Date("Oct 27, 2022 15:37:25").getTime();
                         
                         var x = setInterval(function() {
                         
