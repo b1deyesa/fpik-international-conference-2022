@@ -1413,6 +1413,16 @@ footer {
         max-width: 40em;
         padding: 2em;
     }
+
+    .admin .action {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+    }
+    .admin .action .export {
+        margin: 0 0 2em;
+    }
 }
 
 @media only screen and (max-width: 800px) {
