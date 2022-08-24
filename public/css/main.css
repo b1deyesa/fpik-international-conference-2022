@@ -874,6 +874,35 @@ body {
     margin: 0 0 1em;
     color: var(--palatte-2-4);
 }
+.admin .action {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 0 2em;
+}
+.admin .action .export {
+    display: block;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+    height: fit-content;
+    padding: .2em 1em;
+    border-radius: 10em;
+    color: var(--color-black);
+    background-color: var(--palatte-2-4);
+}
+.admin .action .search-bar {
+    width: 100%;
+    max-width: 300px;
+}
+.admin .action .search-bar input {
+    width: 100%;
+    padding: .2em 1em;
+}
+.admin .action .search-bar input:focus {
+    outline: none;
+}
 .admin .status {
     display: flex;
     flex-wrap: wrap;
@@ -883,17 +912,24 @@ body {
     margin: 0 0 2em;
 }
 .admin .status li {
-    font-weight: bold;
-    text-align: center;
-    text-transform: uppercase;
     list-style: none;
-    white-space: nowrap;
     width: 15%;
     margin: .5%;
+}
+.admin .status li a {
+    display: block;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    white-space: nowrap;
     padding: .5em 1.5em;
     border-radius: 10em;
     color: var(--color-white);
     background: radial-gradient(transparent,#FFFFFF60);
+}
+.admin .status li a:hover {
+    background-color: var(--palatte-1-2);
 }
 .admin .table {
     min-height: 65vh;

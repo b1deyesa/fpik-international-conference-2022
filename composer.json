@@ -10,7 +10,10 @@
         "itsgoingd/clockwork": "^5.1",
         "laravel/framework": "^9.19",
         "laravel/sanctum": "^3.0",
-        "laravel/tinker": "^2.7"
+        "laravel/scout": "^9.4",
+        "laravel/tinker": "^2.7",
+        "maatwebsite/excel": "^3.1",
+        "phpoffice/phpspreadsheet": "^1.24"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",

@@ -31,7 +31,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/user/payment/{payment}',   [PaymentController::class, 'download']) ->name('payment.download');
     Route::get('/user/article/{article}',   [ArticleController::class, 'download']) ->name('article.download');
     Route::get('/admin',                    [AdminController::class,   'index'])    ->name('admin.index');
-    Route::get('/admin/{payment}/{status}', [PaymentController::class, 'confirm'])  ->name('payment.confirm');
+    Route::get('/admin/search',             [AdminController::class,   'search'])   ->name('admin.search');
+    Route::get('/admin/export',             [AdminController::class,   'export'])   ->name('admin.export');
+    Route::get('/admin/status/{status}',    [AdminController::class,   'status'])   ->name('admin.status');
     Route::get('/admin/set/admin/{user}',   [AdminController::class,   'setAdmin']) ->name('admin.setAdmin');
     Route::get('/admin/get/admin/{user}',   [AdminController::class,   'getAdmin']) ->name('admin.getAdmin');
 });

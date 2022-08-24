@@ -5,14 +5,26 @@
             <a href=" @if (auth()->user()->id == 1) {{ route('login') }} @else {{ route('user.index') }} @endif" class="back">< Back</a>
             <h1 class="title">Admin Checking</h1>
 
+            <div class="action">
+
+                {{-- Export --}}
+                <a href="{{ route('admin.export') }}" class="export"><i class="fas fa-file-alt"></i>&nbsp; Backup data</a>
+                
+                {{-- Searchbar --}}
+                <form class="search-bar" action="{{ route('admin.search') }}" method="GET">
+                    <input type="search" name="search" id="search" placeholder="Search here" autocomplete="off">
+                </form>
+                
+            </div>
+
             {{-- Status --}}
             <ul class="status">
-                <li>General : {{ $users->where('status_id', 1)->count() }}</li>
-                <li>Student : {{ $users->where('status_id', 2)->count() }}</li>
-                <li>Researcher : {{ $users->where('status_id', 3)->count() }}</li>
-                <li>Lecturers : {{ $users->where('status_id', 4)->count() }}</li>
-                <li>Presenter-Dom : {{ $users->where('status_id', 5)->count() }}</li>
-                <li>Presenter-Int : {{ $users->where('status_id', 6)->count() }}</li>
+                <li><a href="{{ route('admin.status', ['status' => 1]) }}">General : {{ $status->where('status_id', 1)->count() }}</a></li>
+                <li><a href="{{ route('admin.status', ['status' => 2]) }}">Student : {{ $status->where('status_id', 2)->count() }}</a></li>
+                <li><a href="{{ route('admin.status', ['status' => 3]) }}">Researcher : {{ $status->where('status_id', 3)->count() }}</a></li>
+                <li><a href="{{ route('admin.status', ['status' => 4]) }}">Lecturers : {{ $status->where('status_id', 4)->count() }}</a></li>
+                <li><a href="{{ route('admin.status', ['status' => 5]) }}">Presenter-Dom : {{ $status->where('status_id', 5)->count() }}</a></li>
+                <li><a href="{{ route('admin.status', ['status' => 6]) }}">Presenter-Int : {{ $status->where('status_id', 6)->count() }}</a></li>
             </ul>
             
             {{-- Table --}}
