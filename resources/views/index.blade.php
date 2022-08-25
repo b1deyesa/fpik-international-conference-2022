@@ -264,11 +264,27 @@
                 </div>
             </div>
             <div class="speaker-box">
+                <img class="photo" src="{{ asset('img/speakers/amanda_reichhelt.png') }}">
+                <img class="flag" src="{{ asset('img/flag/australia.png') }}">
+                <div class="text">
+                    <h3 class="title">Prof. Amanda Reichelt-Brushett</h3>
+                    <p>Southern Cross University</p>
+                </div>
+            </div>
+            <div class="speaker-box">
                 <img class="photo" src="{{ asset('img/user.jpeg') }}">
                 <img class="flag" src="{{ asset('img/flag/japan.png') }}">
                 <div class="text">
                     <h3 class="title">Prof. Sota Yamamoto</h3>
                     <p>Kagoshima University, Japan</p>
+                </div>
+            </div>
+            <div class="speaker-box">
+                <img class="photo" src="{{ asset('img/speakers/masanori_kobayashi.png') }}">
+                <img class="flag" src="{{ asset('img/flag/japan.png') }}">
+                <div class="text">
+                    <h3 class="title">Masanori Kobayashi</h3>
+                    <p>Ocean Policy Research Institute, Japan</p>
                 </div>
             </div>
             <div class="speaker-box">
