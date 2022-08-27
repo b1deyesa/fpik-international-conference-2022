@@ -1285,6 +1285,16 @@ body {
     width: 100%;
     overflow-x: auto;
 }
+.admin .table::-webkit-scrollbar {
+    display: block;
+    max-height: .4em;
+    max-width: 50em;
+    background-color: #00000050;
+}
+.admin .table::-webkit-scrollbar-thumb {
+    border-radius: 10em;
+    background: linear-gradient(#fff,#aaa);
+}
 .admin .table table {
     border-collapse: collapse;
     white-space: nowrap;
