@@ -52,8 +52,8 @@
 
                 {{-- Regist Form --}}
                 <form id="regist" action="{{ route('user.store') }}" method="POST">
-                    <h2 class="title">Registrasi</h2>
-                    <small class="sub-title">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio, perspiciatis.</small>
+                    <h2 class="title">Registration</h2>
+                    <small class="sub-title">Please complete all field. You will receive a separate email with Login Code. </small>
                     
                     <x-alert type="success" target="success"></x-alert>
                     <x-alert type="error" target="name"></x-alert>
@@ -89,7 +89,7 @@
                 {{-- Login Form --}}
                 <form id="login" action="{{ route('user.login') }}" method="POST">
                     <h2 class="title">Login</h2>
-                    <small class="sub-title">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio, perspiciatis.</small>
+                    <small class="sub-title">get an access code from your email <i>(you need to register first)</i></small>
                     
                     <x-alert type="error" target="password"></x-alert>
 
