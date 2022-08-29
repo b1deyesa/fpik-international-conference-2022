@@ -272,6 +272,14 @@
                 </div>
             </div>
             <div class="speaker-box">
+                <img class="photo" src="{{ asset('img/speakers/matthew_bertin.png') }}">
+                <img class="flag" src="{{ asset('img/flag/usa.png') }}">
+                <div class="text">
+                    <h3 class="title">Matthew Bertin, Ph.D</h3>
+                    <p>University of Rhode Island</p>
+                </div>
+            </div>
+            <div class="speaker-box">
                 <img class="photo" src="{{ asset('img/speakers/masanori_kobayashi.png') }}">
                 <img class="flag" src="{{ asset('img/flag/japan.png') }}">
                 <div class="text">
@@ -301,14 +309,6 @@
                 <div class="text">
                     <h3 class="title">Prof Dr N Prachanat</h3>
                     <p>Buriram Rajabath University, Thailand</p>
-                </div>
-            </div>
-            <div class="speaker-box">
-                <img class="photo" src="{{ asset('img/user.jpeg') }}">
-                <img class="flag" src="{{ asset('img/flag/timor_leste.png') }}">
-                <div class="text">
-                    <h3 class="title">Aleixo Leonito Amaral, MSc</h3>
-                    <p>National University of Timor Lorosa'e, Dili, Timor-Leste</p>
                 </div>
             </div>
         </div>
