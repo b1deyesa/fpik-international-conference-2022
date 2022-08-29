@@ -190,17 +190,17 @@
     {{-- Keynote Speaker --}}
     <section class="keynote-speaker">
         <div class="container">
-            <img class="photo" src="{{ asset('img/user.jpeg') }}">
+            <img class="photo" src="{{ asset('img/speakers/amalia_adininggar.png') }}">
             <div class="text">
                 <h1 class="title">Keynote Speaker</h1>
                 <h2 class="sub-title">Amalia Adininggar Widyasanti, ST, MSi, M.Eng. Ph.D</h2>
-                <p></p>
+                <p>Badan Perencanaan Pembangunan Nasional</p>
             </div>
         </div>
     </section>
     
     {{-- International Speaker --}}
-    <section class="international-speaker">
+    {{-- <section class="international-speaker">
         <div class="container">
             <h1 class="title">International Scientific</h1>
             <div class="speaker-box">
@@ -228,10 +228,10 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
     {{-- National Speaker --}}
-    <section class="national-speaker">
+    {{-- <section class="national-speaker">
         <div class="container">
             <h1 class="title">Indonesian Scientific</h1>
             <div class="speaker-box">
@@ -249,7 +249,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
     {{--  Invited Speaker --}}
     <section class="invited-speaker">
@@ -272,19 +272,19 @@
                 </div>
             </div>
             <div class="speaker-box">
-                <img class="photo" src="{{ asset('img/user.jpeg') }}">
-                <img class="flag" src="{{ asset('img/flag/japan.png') }}">
-                <div class="text">
-                    <h3 class="title">Prof. Sota Yamamoto</h3>
-                    <p>Kagoshima University, Japan</p>
-                </div>
-            </div>
-            <div class="speaker-box">
                 <img class="photo" src="{{ asset('img/speakers/masanori_kobayashi.png') }}">
                 <img class="flag" src="{{ asset('img/flag/japan.png') }}">
                 <div class="text">
                     <h3 class="title">Masanori Kobayashi</h3>
                     <p>Ocean Policy Research Institute, Japan</p>
+                </div>
+            </div>
+            <div class="speaker-box">
+                <img class="photo" src="{{ asset('img/speakers/victor_nikijuluw.png') }}">
+                <img class="flag" src="{{ asset('img/flag/indonesia.png') }}">
+                <div class="text">
+                    <h3 class="title">Dr. Ir. Victor Nikijuluw, MSc</h3>
+                    <p>Seniorn Ocean Program Lead</p>
                 </div>
             </div>
             <div class="speaker-box">
@@ -318,7 +318,7 @@
     <section class="details">
         <div class="container">
             <div class="detail-box">
-                <h1 class="title">Vanue</h1>
+                <h1 class="title">Venue</h1>
                 <ul>
                     <li>
                         <i class="fas fa-calendar-alt"></i>

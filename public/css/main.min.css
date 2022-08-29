@@ -530,6 +530,9 @@ body {
     margin: 0 0 .5em;
     color: var(--color-gray);
 }
+.keynote-speaker .text p {
+    color: var(--color-white);
+}
 
 .international-speaker {
     display: -webkit-box;
@@ -687,9 +690,9 @@ body {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    background: -webkit-gradient(linear,left top, left bottom,from(#367591DD),to(#53bca0DD));
-    background: -o-linear-gradient(#367591DD,#53bca0DD);
-    background: linear-gradient(#367591DD,#53bca0DD);
+    background: -webkit-gradient(linear,left top, left bottom,from(#367591FE),to(#53bca0DD));
+    background: -o-linear-gradient(#367591FE,#53bca0DD);
+    background: linear-gradient(#367591FE,#53bca0DD);
 }
 .invited-speaker .container {
     display: -webkit-box;
@@ -1534,7 +1537,7 @@ footer {
     }
     .invited-speaker .container > .title {
         text-align: center;
-        margin: 1.5em 0 1em;
+        margin: 0 0 1em;
     }
     .invited-speaker .speaker-box .photo {
         font-size: .9em;
