@@ -11,7 +11,7 @@
                 <a href="{{ route('admin.export') }}" class="export"><i class="fas fa-file-alt"></i>&nbsp; Backup data</a>
                 
                 {{-- Searchbar --}}
-                <form class="search-bar" action="{{ route('admin.search') }}" method="GET">
+                <form class="search-bar" action="{{ route('admin.index') }}" method="GET">
                     <input type="search" name="search" id="search" placeholder="Search here" autocomplete="off">
                 </form>
                 
@@ -31,7 +31,6 @@
             <div class="table">
                 <table>
                     <tr>
-                        <th rowspan="2">Timestamp</th>
                         <th rowspan="2">Status</th>
                         <th rowspan="2">Full Name</th>
                         <th rowspan="2">Email</th>
@@ -39,6 +38,8 @@
                         <th rowspan="2">Institution</th>
                         <th colspan="3">Payment</th>
                         <th rowspan="2">Article</th>
+                        <th rowspan="2">Abstrak</th>
+                        <th rowspan="2">Full Paper</th>
                         <th rowspan="2">Admin</th>
                     </tr>
                     <tr>
@@ -46,9 +47,8 @@
                         <th>File</th>
                         <th>Confirm</th>
                     </tr>
-                    @foreach ($users as $user)
+                    @foreach ($users->where('id', '!=', 1) as $user)
                     <tr>
-                        <td>{{ $user->created_at }}</td>
                         <td>{{ $user->status->name }}</td>
                         <td>{{ $user->name }}</td>
                         <td>{{ $user->email }}</td>
@@ -74,6 +74,18 @@
                             @empty($user->article->path)
                             @else
                                 <a href="{{ route('article.download', ['article' => $user->article]) }}">Download</a>
+                            @endempty
+                        </td>
+                        <td>
+                            @empty($user->abstrak->path)
+                            @else
+                                <a href="{{ route('abstrak.download', ['abstrak' => $user->abstrak]) }}">Download</a>
+                            @endempty
+                        </td>
+                        <td>
+                            @empty($user->fullpaper->path)
+                            @else
+                                <a href="{{ route('fullpaper.download', ['fullpaper' => $user->fullpaper]) }}">Download</a>
                             @endempty
                         </td>
                         @if ($user->role_id === 2)

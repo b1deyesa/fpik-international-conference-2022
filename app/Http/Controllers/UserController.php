@@ -39,6 +39,8 @@ class UserController extends Controller
         
         PaymentController::store($user);
         ArticleController::store($user);
+        FullPaperController::store($user);
+        AbstrakController::store($user);
 
         // Send Mail
         Mail::to($request->email)->send(new SendCode($request->name,$access_code));
@@ -62,6 +64,8 @@ class UserController extends Controller
         $user->save();
 
         ArticleController::update($request,$user);
+        FullPaperController::update($request,$user);
+        AbstrakController::update($request,$user);
 
         return back()->with('success', 'Update success');
     }

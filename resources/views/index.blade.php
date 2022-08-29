@@ -114,15 +114,30 @@
 
             {{-- Switch Form --}}
             <script>
-                $('#login').hide()
+                $('#regist').hide()
                 login  = () => $('#login').show() && $('#regist').hide()
                 regist = () => $('#regist').show() && $('#login').hide()
             </script>
-            @error('password') 
+            @error('name') 
             <script>
-                $('#login').show() && $('#regist').hide()
+                $('#regist').show() && $('#login').hide()
             </script>
             @enderror
+            @error('email') 
+            <script>
+                $('#regist').show() && $('#login').hide()
+            </script>
+            @enderror
+            @error('status') 
+            <script>
+                $('#regist').show() && $('#login').hide()
+            </script>
+            @enderror
+            @if(session()->has('success')) 
+            <script>
+                $('#regist').show() && $('#login').hide()
+            </script>
+            @endif
 
             <span class="go-to">
                 Go To Detail <br>
@@ -411,6 +426,11 @@
                     <li><strong>Presenter:</strong> National and international researchers and lecturers will present their scientific projects in this conference. Only oral presentation will be accommodated in this conference.</li>
                     <li><strong>Participants:</strong> It is expected that researcher, lecturers, students and any representatives from academic, government and NGO’s will attend this conference.</li>
                 </ul>
+                <div class="upload">
+                    <h3 class="abstract">Call for Abstract : <i>01 January 2022</i></h3>
+                    <h3 class="Fullpaper">Call for Full Paper : <i>01 January 2022</i></h3>
+                    <a href="{{ route('abstract-fullpaper') }}">> See all abstract & fullpaper</a>
+                </div>
             </div>
 
             {{-- Committee --}}

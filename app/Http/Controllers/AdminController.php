@@ -11,12 +11,16 @@ use Maatwebsite\Excel\Facades\Excel;
 
 class AdminController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
         if(auth()->user()->role_id != 2) { return redirect('/'); }
         
         return view('admin', [
-            'users' => User::whereNotIn('id', array(1))->orderBy('status_id', 'DESC')->get(),
+            'users' => User::where('name', 'LIKE', '%' . $request->search . '%')
+                            ->orWhere('email', 'LIKE', '%' . $request->search . '%')
+                            ->orWhere('phone', 'LIKE', '%' . $request->search . '%')
+                            ->orWhere('institution', 'LIKE', '%' . $request->search . '%')
+                            ->get(),
             'status' => User::whereNotIn('id', array(1))->orderBy('status_id', 'DESC')->get()
         ]);
     }
@@ -39,14 +43,6 @@ class AdminController extends Controller
     {
         User::where('id',$user->id)->update(['role_id' => 1]);
         return back();
-    }
-
-    public function search(Request $request)
-    {
-        return view('admin', [
-            'users' => User::search($request->search)->get(),
-            'status' => User::whereNotIn('id', array(1))->orderBy('status_id', 'DESC')->get()
-        ]);
     }
 
     public function export()

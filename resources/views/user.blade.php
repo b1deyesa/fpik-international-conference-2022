@@ -13,6 +13,8 @@
             <x-alert type="success" target="success"></x-alert>
             <x-alert type="error" target="file"></x-alert>
             <x-alert type="error" target="article"></x-alert>
+            <x-alert type="error" target="fullpaper"></x-alert>
+            <x-alert type="error" target="abstrak"></x-alert>
             <x-alert type="error" target="name"></x-alert>
             <x-alert type="error" target="phone"></x-alert>
             <x-alert type="error" target="institution"></x-alert>
@@ -110,6 +112,22 @@
                             @endif
                             <input type="file" name="article" id="article">
                             <label for="article">Article</label>
+                        </li>
+                    @endcan
+                    @can('user-payment')
+                        <li>
+                            @if (auth()->user()->abstrak->path != null)
+                                <a href="{{ route('abstrak.download', ['abstrak' => auth()->user()->abstrak]) }}">Download Abstract</a>
+                            @endif
+                            <input type="file" name="abstrak" id="abstrak">
+                            <label for="abstrak">Abstract</label>
+                        </li>
+                        <li>
+                            @if (auth()->user()->fullpaper->path != null)
+                                <a href="{{ route('fullpaper.download', ['fullpaper' => auth()->user()->fullpaper]) }}">Download Full Paper</a>
+                            @endif
+                            <input type="file" name="fullpaper" id="fullpaper">
+                            <label for="fullpaper">Fullpaper</label>
                         </li>
                     @endcan
                     <li>

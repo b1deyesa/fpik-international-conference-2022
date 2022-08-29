@@ -52,9 +52,7 @@ class AuthServiceProvider extends ServiceProvider
         Gate::define('user-article', function (User $user) {
             return 
                    $user->status->id  == 3 || 
-                   $user->status->id  == 4 || 
-                   $user->status->id  == 5 || 
-                   $user->status->id  == 6 ;
+                   $user->status->id  == 4;
         });
 
         Gate::define('admin', function (User $user) {
