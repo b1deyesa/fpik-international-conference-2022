@@ -10,7 +10,7 @@
 
     {{-- CSS Links --}}
     {{-- <link rel="stylesheet" href="{{ asset('css/main.css') }}"> --}}
-    <link rel="stylesheet" href="{{ asset('css/main.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
     {{-- JavaScript Links --}}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
