@@ -310,22 +310,6 @@
                     <p>Seniorn Ocean Program Lead</p>
                 </div>
             </div>
-            <div class="speaker-box">
-                <img class="photo" src="{{ asset('img/user.jpeg') }}">
-                <img class="flag" src="{{ asset('img/flag/australia.png') }}">
-                <div class="text">
-                    <h3 class="title">Dr. Yan Sopahelwakan</h3>
-                    <p>Australia</p>
-                </div>
-            </div>
-            <div class="speaker-box">
-                <img class="photo" src="{{ asset('img/user.jpeg') }}">
-                <img class="flag" src="{{ asset('img/flag/thailand.png') }}">
-                <div class="text">
-                    <h3 class="title">Prof Dr N Prachanat</h3>
-                    <p>Buriram Rajabath University, Thailand</p>
-                </div>
-            </div>
         </div>
     </section>
 
