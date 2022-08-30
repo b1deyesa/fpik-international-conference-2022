@@ -5,7 +5,10 @@
 
             {{-- Jumbotron Detail --}}
             <div class="detail">
-                <h1 class="big-title">"Promoting Blue Economy by Protection - Production Strategy"</h1>
+                <h1 class="big-title">
+                    <img src="{{ asset('img/qrcode.png') }}" class="qr">
+                    <p>"Promoting Blue Economy by Protection - Production Strategy"</p>
+                </h1>
                 <h3 class="title">Pattimura University International Conference Series</h3>
                 <h3 class="sub-title">Organized by: Faculty of Fisheries and Marine Science, Pattimura University, Ambon, Indonesia</h3>
                 <h2 class="time">
@@ -411,8 +414,8 @@
                     <li><strong>Participants:</strong> It is expected that researcher, lecturers, students and any representatives from academic, government and NGO’s will attend this conference.</li>
                 </ul>
                 <div class="upload">
-                    <h3 class="abstract">Call for Abstract : <i>01 January 2022</i></h3>
-                    <h3 class="Fullpaper">Call for Full Paper : <i>01 January 2022</i></h3>
+                    <h3 class="abstract">Call for Abstract : <i>1 - 30 September 2022</i></h3>
+                    <h3 class="Fullpaper">Call for Full Paper : <i>1 - 30 September 2022</i></h3>
                     <a href="{{ route('abstract-fullpaper') }}">> See all abstract & fullpaper</a>
                 </div>
             </div>

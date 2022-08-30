@@ -121,8 +121,18 @@ body {
     width: 62%;
 }
 .jumbotron .detail .big-title {
+    display: flex;
+    align-items: center;
     margin: .8em 0;
+}
+.jumbotron .detail .big-title img {
+    height: 4em;
+    width: 4em;
+}
+.jumbotron .detail .big-title p {
     color: var(--color-white);
+    max-width: 400px;
+    margin: 0 0 0 1em;
 }
 .jumbotron .detail .title {
     width: -webkit-fit-content;
@@ -1043,7 +1053,7 @@ body {
         -ms-flex-align: center;
             align-items: center;
     width: 100%;
-    margin: 0 0 2em;
+    margin: 0 0 1em;
     padding: 1em 2em;
     border-radius: 1em;
 }
@@ -1084,6 +1094,16 @@ body {
     border-radius: 10em;
     color: var(--color-black);
     background-color: var(--color-white);
+}
+.user .info {
+    width: 100%;
+    margin: 0 0 2em;
+    padding: 1em 2em;
+    border-radius: 1em;
+    background-color: var(--palatte-2-4);
+}
+.user .info i {
+    margin: 0 .5em 0 0;
 }
 .user .form {
     display: -webkit-box;
@@ -1678,7 +1698,12 @@ footer {
         max-width: 40em;
         margin: 0 0 4em;
     }
-
+    .jumbotron .detail .big-title {
+        flex-direction: column;
+    }
+    .jumbotron .detail .big-title p {
+        margin: 1em 0 0;
+    }
     .national-speaker .container {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;

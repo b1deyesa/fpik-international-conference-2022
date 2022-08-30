@@ -81,7 +81,12 @@
                     </form>
 
                 </div>
-            </div> 
+            </div>
+            @if( auth()->user()->abstrak->name == null || auth()->user()->fullpaper->name == null )
+                <div class="info">
+                    <p><i class="fas fa-exclamation-triangle"></i> Call for Abstract and Fullpaper : <strong>1 - 30 September 2022</strong></p>
+                </div>
+            @endif
             @endcan
 
             {{-- Update Form --}}

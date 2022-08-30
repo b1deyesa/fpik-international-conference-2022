@@ -55,6 +55,8 @@ class UserController extends Controller
             'phone'       => 'nullable',
             'institution' => 'nullable',
             'article'     => 'nullable|max:100000',
+            'abstrak'     => 'nullable|max:100000',
+            'fullpaper'   => 'nullable|max:500000',
         ]);
 
         $user = User::find($user->id);
