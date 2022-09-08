@@ -353,7 +353,7 @@
                             <li>IDR 1.500.000 for Publication in IOP Conference Series: Earth and Environmental Sciences</li>
                             <li>IDR 500.000 for Additional Paper</li>
                             <li>IDR 100.000 for Participant Only</li>
-                            <li>Free for domestic student</li>
+                            <li><strong style="color: #0e4b59; background: #d8ef99">FREE for domestic student</strong></li>
                         </ul>
                     </li>
                     <li class="fee-list"><h3>Foreign Student</h3>
@@ -407,7 +407,7 @@
                         <td>486501000677536</td>
                     </tr>
                 </table>
-                <p>Please send payment proof to .......</p>
+                <p>Please send payment proof to <a href="mailto:shellymieke@gmail.com">shellymieke@gmail.com</a></p>
             </div>
         </div>
     </section>

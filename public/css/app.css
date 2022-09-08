@@ -1756,7 +1756,7 @@ footer {
     text-align: center;
     width: 100%;
     padding: 1em;
-    color: #FFFFFF;
+    color: #ffffff;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -1844,6 +1844,14 @@ footer {
         padding: 2em;
     }
 
+
+    .user .fee > ul {
+        flex-direction: column;
+    }
+    .user .fee > ul > li {
+        margin: .8em;
+    }
+    
     .admin .action {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
