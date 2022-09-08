@@ -35,6 +35,7 @@ class SendCode extends Mailable
      */
     public function build()
     {
-        return $this->view('mails.send-code');
+        return $this->subject('ICSBE Access Code')
+                    ->view('mails.send-code');
     }
 }
