@@ -461,8 +461,8 @@
                     <li><strong>Participants:</strong> It is expected that researcher, lecturers, students and any representatives from academic, government and NGO’s will attend this conference.</li>
                 </ul>
                 <div class="upload">
-                    <h3 class="abstract">Call for Abstract : <i>1 - 30 September 2022</i></h3>
-                    <h3 class="Fullpaper">Call for Full Paper : <i>1 - 30 September 2022</i></h3>
+                    <h3 class="abstract">Abstract Deadline: <i>1 AUG - 1 OCT 2022</i></h3>
+                    <h3 class="Fullpaper">Full Paper Deadline: <i>1 AUG - 15 OCT 2022</i></h3>
                     <a href="{{ route('abstract-fullpaper') }}">> See all abstract & fullpaper</a>
                 </div>
             </div>
