@@ -331,25 +331,7 @@
                         The conference will be conducted virtually
                     </li>
                 </ul>
-            </div>
-            <div class="detail-box">
-                <h1 class="title">Conference Fee</h1>
-                <ul>
-                    <li>
-                        <i class="fas fa-money-bill-alt"></i>
-                        Presenter Rp. 1,500,000, - (Domestic)
-                    </li>
-                    <li>
-                        <i class="fas fa-sack-dollar"></i>
-                        Presenter $ 150. - (International)
-                    </li>
-                    <li>
-                        <i class="fas fa-hand-holding-usd"></i>
-                        Participant &nbsp;<strong>FREE</strong>
-                    </li>
-                </ul>
-            </div>
-            <div class="detail-box">
+                <br>
                 <h1 class="title">Facilities</h1>
                 <ul>
                     <li>
@@ -361,6 +343,71 @@
                         IOP Publisher (Scopus Indexed)
                     </li>
                 </ul>
+            </div>
+            <div class="detail-box">
+                <h1 class="title">Conference Fee</h1>
+                <ul class="fee">
+                    <li class="fee-list"><h3>Domestic Participant</h3>
+                        <ul>
+                            <li>IDR 200.000 for Presenter Only</li>
+                            <li>IDR 1.500.000 for Publication in IOP Conference Series: Earth and Environmental Sciences</li>
+                            <li>IDR 500.000 for Additional Paper</li>
+                            <li>IDR 100.000 for Participant Only</li>
+                            <li>Free for domestic student</li>
+                        </ul>
+                    </li>
+                    <li class="fee-list"><h3>Foreign Student</h3>
+                        <ul>
+                            <li>USD 50 for Presenter Only</li>
+                            <li>USD 100 for Publication in IOP Conference Series: Earth and Environmental Sciences</li>
+                            <li>USD 50 for Additional Paper</li>
+                            <li>USD 30 for Participant Only</li>
+                        </ul>
+                    </li>
+                    <li class="fee-list"><h3>Foreign Participant</h3>
+                        <ul>
+                            <li>USD 75 for Presenter Only</li>
+                            <li>USD 150 for Publication in IOP Conference Series: Earth and Environmental Science</li>
+                            <li>USD 50 for Additional Paper</li>
+                            <li>USD 40 for Participant Only</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="detail-box">
+                <h1 class="title">Payment Method</h1>
+                <p>For all presenters and participants, please make the payment to the following banking details:</p>
+                <table>
+                    <tr>
+                        <td colspan="3"><img src="{{ asset('img/bri.jpeg') }}"></td>
+                    </tr>
+                    <tr>
+                        <td>Name</td>
+                        <td>:</td>
+                        <td>Ir. Juliana W. Tuahatu</td>
+                    </tr>
+                    <tr>
+                        <td>Bank</td>
+                        <td>:</td>
+                        <td>Bank Republik Indonesia (BRI)</td>
+                    </tr>
+                    <tr>
+                        <td>Swift code</td>
+                        <td>:</td>
+                        <td>BRINIDJA001</td>
+                    </tr>
+                    <tr>
+                        <td>Branch</td>
+                        <td>:</td>
+                        <td>BRI AMBON</td>
+                    </tr>
+                    <tr>
+                        <td>Account Number</td>
+                        <td>:</td>
+                        <td>486501000677536</td>
+                    </tr>
+                </table>
+                <p>Please send payment proof to .......</p>
             </div>
         </div>
     </section>

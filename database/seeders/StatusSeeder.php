@@ -15,13 +15,13 @@ class StatusSeeder extends Seeder
      */
     public function run()
     {
+        Status::truncate();
+        
         $array = [
-            [ 'name' => 'General' ],
-            [ 'name' => 'Student' ],
-            [ 'name' => 'Researcher' ],
-            [ 'name' => 'Lecturers' ],
-            [ 'name' => 'Presenter - Domestic' ],
-            [ 'name' => 'Presenter - International' ]
+            [ 'name' => 'Domestic Participant' ],
+            [ 'name' => 'Domestic Student' ],
+            [ 'name' => 'Foreign Participant' ],
+            [ 'name' => 'Foreign Student' ],
         ];
 
         foreach ($array as $item) {

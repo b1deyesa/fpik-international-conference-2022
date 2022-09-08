@@ -5,6 +5,13 @@
 * Browsers: last 4 version
 */
 
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 ::-webkit-scrollbar { display: none; }
 * { 
@@ -121,8 +128,12 @@ body {
     width: 62%;
 }
 .jumbotron .detail .big-title {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin: .8em 0;
 }
 .jumbotron .detail .big-title img {
@@ -800,9 +811,9 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
     width: 30%;
     margin: 1%;
     padding: 3em;
@@ -813,10 +824,12 @@ body {
             box-shadow: .2em .2em 1em var(--transparent-black);
 }
 .details .detail-box .title {
+    text-align: center;
+    width: 100%;
     margin: 0 0 .5em;
     color: var(--palatte-2-1);
 }
-.details .detail-box ul {
+.details .detail-box > ul {
    display: -webkit-box;
    display: -ms-flexbox;
    display: flex;
@@ -826,19 +839,55 @@ body {
            flex-direction: column;
    padding: 0;
 }
-.details .detail-box ul li {
+.details .detail-box > ul > li {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    list-style: none;
     margin: .5em 0;
 }
-.details .detail-box ul li i {
+.details .detail-box > ul > li i {
     font-size: 2em;
     margin: 0 .5em 0 0;
+}
+.details .detail-box .fee {
+    display: block;
+}
+.details .detail-box .fee .fee-list {
+    display: block;
+}
+.details .detail-box .fee .fee-list ul {
+    list-style-type: square;
+    margin: .5em 0 0;
+}
+.details .detail-box .fee .fee-list ul li {
+    margin: 0 0 0 1.5em;
+}
+.details .detail-box table {
+    border-collapse: collapse;
+    max-width: 100%;
+    margin: 2em 0;
+    padding: 0;
+    border: 2px solid var(--transparent-black);
+}
+.details .detail-box table tr td {
+    padding: .2em 1em;
+}
+.details .detail-box table tr td:nth-child(2) {
+    padding: 0;
+}
+.details .detail-box table tr:nth-child(2) td {
+    padding-top: 1em;
+}
+.details .detail-box table tr:first-child td {
+    padding: 0;
+    border: 2px solid var(--transparent-black);
+}
+.details .detail-box img {
+    width: 100%;
+    display: block;
 }
 
 .credit {
@@ -1097,7 +1146,7 @@ body {
 }
 .user .info {
     width: 100%;
-    margin: 0 0 2em;
+    margin: 2em 0;
     padding: 1em 2em;
     border-radius: 1em;
     background-color: var(--palatte-2-4);
@@ -1127,6 +1176,7 @@ body {
     width: 100%;
 }
 .user .form ul li {
+    position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1182,7 +1232,10 @@ body {
     color: white;
 }
 .user .form ul li > a {
+    position: absolute;
     display: block;
+    right: 0;
+    bottom: -2em;
     text-align: right;
     text-decoration: none;
     margin: .8em .5em 0 0;
@@ -1204,7 +1257,9 @@ body {
     background-color: var(--palatte-1-4);
 }
 .user .form ul li .logout {
+    position: relative;
     display: block;
+    bottom: 0;
     text-decoration: none;
     width: -webkit-fit-content;
     width: -moz-fit-content;
@@ -1214,6 +1269,42 @@ body {
 }
 .user .form ul li .logout:hover {
     text-decoration: underline;
+}
+.user .fee {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    font-size: .9rem;
+    margin: 4em 0 2em;
+    padding: 2em 1em;
+    border-radius: 2em 0;
+    color: var(--color-gray);
+    background-color: #FFFFFF10;
+}
+.user .fee .title {
+    text-align: center;
+    width: 100%;
+    margin: 0 0 1em;
+}
+.user .fee > ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.user .fee > ul > li {
+    list-style: none;
+    margin: 0 1em;
+}
+.user .fee > ul > li ul {
+    margin: .5em 0 0;
+    color: var(--transparent-white);
+}
+.user .fee > ul > li ul li {
+    margin: 0 0 0 1em;
 }
 
 .admin {
@@ -1307,7 +1398,7 @@ body {
 }
 .admin .status li {
     list-style: none;
-    width: 15%;
+    width: 23%;
     margin: .5%;
 }
 .admin .status li a {
@@ -1356,7 +1447,7 @@ body {
 .admin .table table td {
     padding: .1em 1em;
     color: var(--color-black);
-    background-color: #f0d7d7;
+    background-color: #dedbdb;
     border: 1px solid #00000050;
 }
 .admin .table table tr:nth-child(odd) td {
@@ -1400,8 +1491,8 @@ body {
         -ms-flex-pack: center;
             justify-content: center;
     min-height: 100vh;
-    background: -webkit-gradient(linear,left top, left bottom,from(#367591CC),color-stop(#152744EE),to(var(--palatte-1-1)));
     background: -o-linear-gradient(#367591CC,#152744EE,var(--palatte-1-1));
+    background: -webkit-gradient(linear,left top, left bottom,from(#367591CC),color-stop(#152744EE),to(var(--palatte-1-1)));
     background: linear-gradient(#367591CC,#152744EE,var(--palatte-1-1));
 }
 .regist .container {
@@ -1530,8 +1621,8 @@ body {
         -ms-flex-pack: center;
             justify-content: center;
     min-height: 100vh;
-    background: -webkit-gradient(linear,left top, left bottom,from(var(--palatte-1-3)),to(var(--palatte-1-4)));
     background: -o-linear-gradient(var(--palatte-1-3),var(--palatte-1-4));
+    background: -webkit-gradient(linear,left top, left bottom,from(var(--palatte-1-3)),to(var(--palatte-1-4)));
     background: linear-gradient(var(--palatte-1-3),var(--palatte-1-4));
 }
 .abstract-fullpaper .container {
@@ -1699,7 +1790,10 @@ footer {
         margin: 0 0 4em;
     }
     .jumbotron .detail .big-title {
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
     .jumbotron .detail .big-title p {
         margin: 1em 0 0;

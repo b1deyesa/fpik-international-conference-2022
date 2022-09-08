@@ -29,12 +29,10 @@ class AuthServiceProvider extends ServiceProvider
 
         # -------- User Status ---------
         #                              |
-        # (1)General                   |
-        # (2)Student                   |
-        # (3)Researcher                |
-        # (4)Lecturers                 |
-        # (5)Presenter - Domestic      |
-        # (6)Presenter - International |
+        # (1)Domestic Participant      |
+        # (2)Domestic Student          |
+        # (3)Foreign Participant       |
+        # (4)Foreign Student           |
         # ------------------------------
 
         # --------- User Role ----------
@@ -45,18 +43,22 @@ class AuthServiceProvider extends ServiceProvider
         # ------------------------------
         
         Gate::define('user-payment', function (User $user) {
-            return $user->status->id === 5 || 
-                   $user->status->id === 6 ;
+            return 
+                   $user->status->id === 1 || 
+                   $user->status->id === 3 ||
+                   $user->status->id === 4 ;
         });
 
         Gate::define('user-article', function (User $user) {
             return 
+                   $user->status->id  == 1 || 
+                   $user->status->id  == 2 || 
                    $user->status->id  == 3 || 
                    $user->status->id  == 4;
         });
 
         Gate::define('admin', function (User $user) {
-            return $user->role->id == 2 ;
+            return $user->role->id == 2;
         });
 
     }

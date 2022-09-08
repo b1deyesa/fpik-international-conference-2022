@@ -82,11 +82,6 @@
 
                 </div>
             </div>
-            @if( auth()->user()->abstrak->name == null || auth()->user()->fullpaper->name == null )
-                <div class="info">
-                    <p><i class="fas fa-exclamation-triangle"></i> Call for Abstract and Fullpaper : <strong>1 - 30 September 2022</strong></p>
-                </div>
-            @endif
             @endcan
 
             {{-- Update Form --}}
@@ -110,13 +105,20 @@
                         <input type="text" name="institution" id="institution" autocomplete="off" value="{{ auth()->user()->institution }}">
                         <label for="institution">Institution</label>
                     </li>
+                    @if ( auth()->user()->status_id != 2)
+                        @if( auth()->user()->abstrak->name == null || auth()->user()->fullpaper->name == null) 
+                            <div class="info">
+                                <p><i class="fas fa-exclamation-triangle"></i> Call for Abstract and Fullpaper : <strong>1 - 30 September 2022</strong></p>
+                            </div>
+                        @endif
+                    @endif
                     @can('user-article')
                         <li>
                             @if (auth()->user()->article->path != null)
                                 <a href="{{ route('article.download', ['article' => auth()->user()->article]) }}">Download Article</a>
                             @endif
                             <input type="file" name="article" id="article">
-                            <label for="article">Article</label>
+                            <label for="article">Article (Optional)</label>
                         </li>
                     @endcan
                     @can('user-payment')
@@ -141,7 +143,38 @@
                     </li>
                 </ul>
             </form>
-            
+
+            {{-- Fee --}}
+            <div class="fee">
+                <h2 class="title">Conference Fee</h2>
+                <ul>
+                    <li class="fee-list"><h3>Domestic Participant</h3>
+                        <ul>
+                            <li>IDR 200.000 for Presenter Only</li>
+                            <li>IDR 1.500.000 for Publication in IOP Conference Series: Earth and Environmental Sciences</li>
+                            <li>IDR 500.000 for Additional Paper</li>
+                            <li>IDR 100.000 for Participant Only</li>
+                            <li>Free for domestic student</li>
+                        </ul>
+                    </li>
+                    <li class="fee-list"><h3>Foreign Student</h3>
+                        <ul>
+                            <li>USD 50 for Presenter Only</li>
+                            <li>USD 100 for Publication in IOP Conference Series: Earth and Environmental Sciences</li>
+                            <li>USD 50 for Additional Paper</li>
+                            <li>USD 30 for Participant Only</li>
+                        </ul>
+                    </li>
+                    <li class="fee-list"><h3>Foreign Participant</h3>
+                        <ul>
+                            <li>USD 75 for Presenter Only</li>
+                            <li>USD 150 for Publication in IOP Conference Series: Earth and Environmental Science</li>
+                            <li>USD 50 for Additional Paper</li>
+                            <li>USD 40 for Participant Only</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </x-layout>

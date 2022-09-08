@@ -19,12 +19,10 @@
 
             {{-- Status --}}
             <ul class="status">
-                <li><a href="{{ route('admin.status', ['status' => 1]) }}">General : {{ $status->where('status_id', 1)->count() }}</a></li>
-                <li><a href="{{ route('admin.status', ['status' => 2]) }}">Student : {{ $status->where('status_id', 2)->count() }}</a></li>
-                <li><a href="{{ route('admin.status', ['status' => 3]) }}">Researcher : {{ $status->where('status_id', 3)->count() }}</a></li>
-                <li><a href="{{ route('admin.status', ['status' => 4]) }}">Lecturers : {{ $status->where('status_id', 4)->count() }}</a></li>
-                <li><a href="{{ route('admin.status', ['status' => 5]) }}">Presenter-Dom : {{ $status->where('status_id', 5)->count() }}</a></li>
-                <li><a href="{{ route('admin.status', ['status' => 6]) }}">Presenter-Int : {{ $status->where('status_id', 6)->count() }}</a></li>
+                <li><a href="{{ route('admin.status', ['status' => 1]) }}">Domestic Participant : {{ $status->where('status_id', 1)->count() }}</a></li>
+                <li><a href="{{ route('admin.status', ['status' => 2]) }}">Domestic Student : {{ $status->where('status_id', 2)->count() }}</a></li>
+                <li><a href="{{ route('admin.status', ['status' => 3]) }}">Foreign Participant : {{ $status->where('status_id', 3)->count() }}</a></li>
+                <li><a href="{{ route('admin.status', ['status' => 4]) }}">Foreign Student : {{ $status->where('status_id', 4)->count() }}</a></li>
             </ul>
             
             {{-- Table --}}
@@ -54,7 +52,7 @@
                         <td>{{ $user->email }}</td>
                         <td>{{ $user->phone }}</td>
                         <td>{{ $user->institution }}</td>
-                        @if($user->status_id == 5 || $user->status_id == 6)
+                        @if($user->status_id == 1 || $user->status_id == 3 || $user->status_id == 4)
                             <td align="center">{{ $user->payment->status }}</td>
                             <td>
                                 @if ($user->payment->status != 'unpaid')
