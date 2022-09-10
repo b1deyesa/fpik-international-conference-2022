@@ -192,39 +192,15 @@
             </h1>
             <div class="topic-box">
                 <span>1</span>
-                <p>Fisheries and Aquaculture</p>
+                <p>Coastal Community Resilience</p>
             </div>
             <div class="topic-box">
                 <span>2</span>
-                <p>Fishing Technology</p>
+                <p>Sustainable fisheries management and conservation</p>
             </div>
             <div class="topic-box">
                 <span>3</span>
-                <p>Remote Sensing and Coastal Oceanography</p>
-            </div>
-            <div class="topic-box">
-                <span>4</span>
-                <p>Marine Biodiversity and Conservation</p>
-            </div>
-            <div class="topic-box">
-                <span>5</span>
-                <p>Aquatic Resource Management</p>
-            </div>
-            <div class="topic-box">
-                <span>6</span>
-                <p>Marine Pollution and Ocean Health</p>
-            </div>
-            <div class="topic-box">
-                <span>7</span>
-                <p>Fisheries Socio-Economics</p>
-            </div>
-            <div class="topic-box">
-                <span>8</span>
-                <p>Fisheries Processing Technology</p>
-            </div>
-            <div class="topic-box">
-                <span>9</span>
-                <p>Ecotourism</p>
+                <p>The safety and effectiveness of maritime activities</p>
             </div>
         </div>
     </section>
@@ -366,6 +342,19 @@
                         <i class="fas fa-certificate"></i>
                         IOP Publisher (Scopus Indexed)
                     </li>
+                </ul>
+                <br>
+                <h1 class="title">Call For Paper Topics:</h1>
+                <ul class="topic">
+                    <li>-&nbsp;&nbsp;Fisheries and Aquaculture</li>
+                    <li>-&nbsp;&nbsp;Fishing Technology</li>
+                    <li>-&nbsp;&nbsp;Remote Sensing and Coastal Oceanography</li>
+                    <li>-&nbsp;&nbsp;Marine Biodiversity and Conservation</li>
+                    <li>-&nbsp;&nbsp;Aquatic Resource Management</li>
+                    <li>-&nbsp;&nbsp;Marine Pollution and Ocean Health</li>
+                    <li>-&nbsp;&nbsp;Fisheries Socio-Economics</li>
+                    <li>-&nbsp;&nbsp;Fisheries Processing Technology</li>
+                    <li>-&nbsp;&nbsp;Ecotourism</li>
                 </ul>
             </div>
             <div class="detail-box">
