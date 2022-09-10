@@ -192,15 +192,39 @@
             </h1>
             <div class="topic-box">
                 <span>1</span>
-                <p>Coastal Community Resilience</p>
+                <p>Fisheries and Aquaculture</p>
             </div>
             <div class="topic-box">
                 <span>2</span>
-                <p>Sustainable fisheries management and conservation</p>
+                <p>Fishing Technology</p>
             </div>
             <div class="topic-box">
                 <span>3</span>
-                <p>The safety and effectiveness of maritime activities</p>
+                <p>Remote Sensing and Coastal Oceanography</p>
+            </div>
+            <div class="topic-box">
+                <span>4</span>
+                <p>Marine Biodiversity and Conservation</p>
+            </div>
+            <div class="topic-box">
+                <span>5</span>
+                <p>Aquatic Resource Management</p>
+            </div>
+            <div class="topic-box">
+                <span>6</span>
+                <p>Marine Pollution and Ocean Health</p>
+            </div>
+            <div class="topic-box">
+                <span>7</span>
+                <p>Fisheries Socio-Economics</p>
+            </div>
+            <div class="topic-box">
+                <span>8</span>
+                <p>Fisheries Processing Technology</p>
+            </div>
+            <div class="topic-box">
+                <span>9</span>
+                <p>Ecotourism</p>
             </div>
         </div>
     </section>
