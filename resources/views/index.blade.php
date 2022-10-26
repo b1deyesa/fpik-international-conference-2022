@@ -475,7 +475,7 @@
                 </ul>
                 <div class="upload">
                     <h3 class="abstract">Abstract Deadline: <i>1 AUG - 1 OCT 2022</i></h3>
-                    <h3 class="Fullpaper">Full Paper Deadline: <i>1 AUG - 15 OCT 2022</i></h3>
+                    <h3 class="Fullpaper">Full Paper Deadline: <i>1 AUG - 30 OCT 2022</i></h3>
                     <a href="{{ route('abstract-fullpaper') }}">> See all abstract & fullpaper</a>
                 </div>
             </div>

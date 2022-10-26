@@ -108,7 +108,7 @@
                     @if ( auth()->user()->status_id != 2)
                         @if( auth()->user()->abstrak->name == null || auth()->user()->fullpaper->name == null) 
                             <div class="info">
-                                <p><i class="fas fa-exclamation-triangle"></i> Deadline for Abstract and Fullpaper : <strong>1 AUG - 15 OCT 2022</strong></p>
+                                <p><i class="fas fa-exclamation-triangle"></i> Deadline for Abstract and Fullpaper : <strong>1 AUG - 30 OCT 2022</strong></p>
                             </div>
                         @endif
                     @endif
